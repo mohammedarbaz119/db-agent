@@ -1,0 +1,63 @@
+-- =====================================================================
+-- Seed: customers + addresses
+-- File: 02_seed_customers_addresses.sql
+-- =====================================================================
+
+INSERT INTO customers (first_name, last_name, email, phone, created_at) VALUES
+('Aarav',   'Sharma',    'aarav.sharma@example.com',    '+91-9820011122', '2024-01-05 10:12:00'),
+('Priya',   'Iyer',      'priya.iyer@example.com',      '+91-9820011123', '2024-01-08 14:32:00'),
+('Rohan',   'Mehta',     'rohan.mehta@example.com',     '+91-9820011124', '2024-01-10 09:05:00'),
+('Sneha',   'Reddy',     'sneha.reddy@example.com',     '+91-9820011125', '2024-01-12 16:45:00'),
+('Vikram',  'Nair',      'vikram.nair@example.com',     '+91-9820011126', '2024-01-15 11:20:00'),
+('Ananya',  'Rao',       'ananya.rao@example.com',      '+91-9820011127', '2024-01-18 13:00:00'),
+('Karan',   'Kapoor',    'karan.kapoor@example.com',    '+91-9820011128', '2024-01-20 08:15:00'),
+('Divya',   'Menon',     'divya.menon@example.com',     '+91-9820011129', '2024-01-22 17:40:00'),
+('Aditya',  'Singh',     'aditya.singh@example.com',    '+91-9820011130', '2024-01-25 12:10:00'),
+('Meera',   'Joshi',     'meera.joshi@example.com',     '+91-9820011131', '2024-01-28 15:55:00'),
+('Arjun',   'Desai',     'arjun.desai@example.com',     '+91-9820011132', '2024-02-01 10:00:00'),
+('Kavya',   'Pillai',    'kavya.pillai@example.com',    '+91-9820011133', '2024-02-03 09:30:00'),
+('Ishaan',  'Chopra',    'ishaan.chopra@example.com',   '+91-9820011134', '2024-02-05 14:00:00'),
+('Riya',    'Bhatt',     'riya.bhatt@example.com',      '+91-9820011135', '2024-02-08 11:45:00'),
+('Devansh', 'Agarwal',   'devansh.agarwal@example.com', '+91-9820011136', '2024-02-10 16:20:00'),
+('Tanvi',   'Kulkarni',  'tanvi.kulkarni@example.com',  '+91-9820011137', '2024-02-12 08:50:00'),
+('Yash',    'Verma',     'yash.verma@example.com',      '+91-9820011138', '2024-02-15 13:35:00'),
+('Nisha',   'Gupta',     'nisha.gupta@example.com',     '+91-9820011139', '2024-02-18 10:10:00'),
+('Kabir',   'Malhotra',  'kabir.malhotra@example.com',  '+91-9820011140', '2024-02-20 15:25:00'),
+('Pooja',   'Saxena',    'pooja.saxena@example.com',    '+91-9820011141', '2024-02-22 12:40:00'),
+('Rahul',   'Thakur',    'rahul.thakur@example.com',    '+91-9820011142', '2024-02-25 09:15:00'),
+('Simran',  'Chawla',    'simran.chawla@example.com',   '+91-9820011143', '2024-02-27 14:50:00'),
+('Aryan',   'Khanna',    'aryan.khanna@example.com',    '+91-9820011144', '2024-03-01 11:05:00'),
+('Neha',    'Bose',      'neha.bose@example.com',       '+91-9820011145', '2024-03-03 16:30:00'),
+('Vivaan',  'Sinha',     'vivaan.sinha@example.com',    '+91-9820011146', '2024-03-05 10:45:00');
+
+-- Two addresses for most customers (home + work), one for a few
+INSERT INTO addresses (customer_id, address_line, city, state, postal_code, country, is_default) VALUES
+(1,  '221 MG Road',            'Mumbai',     'Maharashtra', '400001', 'India', TRUE),
+(1,  'Plot 14, Andheri East',  'Mumbai',     'Maharashtra', '400069', 'India', FALSE),
+(2,  '45 Jubilee Hills',       'Hyderabad',  'Telangana',   '500033', 'India', TRUE),
+(3,  '12 Koramangala 5th Blk', 'Bengaluru',  'Karnataka',   '560095', 'India', TRUE),
+(3,  '77 Indiranagar',         'Bengaluru',  'Karnataka',   '560038', 'India', FALSE),
+(4,  '9 Banjara Hills Rd 3',   'Hyderabad',  'Telangana',   '500034', 'India', TRUE),
+(5,  '56 Marine Drive',        'Mumbai',     'Maharashtra', '400020', 'India', TRUE),
+(6,  '3 Anna Nagar',           'Chennai',    'Tamil Nadu',  '600040', 'India', TRUE),
+(7,  '88 Civil Lines',         'Delhi',      'Delhi',       '110054', 'India', TRUE),
+(7,  '19 Connaught Place',     'Delhi',      'Delhi',       '110001', 'India', FALSE),
+(8,  '27 MG Road',             'Kochi',      'Kerala',      '682016', 'India', TRUE),
+(9,  '61 Salt Lake Sector 5',  'Kolkata',    'West Bengal', '700091', 'India', TRUE),
+(10, '34 FC Road',             'Pune',       'Maharashtra', '411005', 'India', TRUE),
+(10, '5 Kothrud',              'Pune',       'Maharashtra', '411038', 'India', FALSE),
+(11, '72 Navrangpura',         'Ahmedabad',  'Gujarat',     '380009', 'India', TRUE),
+(12, '18 Vastrapur',           'Ahmedabad',  'Gujarat',     '380015', 'India', TRUE),
+(13, '40 Sector 17',           'Chandigarh', 'Chandigarh',  '160017', 'India', TRUE),
+(14, '5 Malviya Nagar',        'Jaipur',     'Rajasthan',   '302017', 'India', TRUE),
+(15, '90 Gomti Nagar',         'Lucknow',    'Uttar Pradesh','226010','India', TRUE),
+(16, '23 Hazratganj',          'Lucknow',    'Uttar Pradesh','226001','India', TRUE),
+(17, '11 Boring Road',         'Patna',      'Bihar',       '800001', 'India', TRUE),
+(18, '66 Sadar Bazaar',        'Nagpur',     'Maharashtra', '440001', 'India', TRUE),
+(19, '30 Vesu',                'Surat',      'Gujarat',     '395007', 'India', TRUE),
+(20, '8 Alkapuri',             'Vadodara',   'Gujarat',     '390007', 'India', TRUE),
+(21, '52 Camp Area',           'Pune',       'Maharashtra', '411001', 'India', TRUE),
+(22, '4 Sector 62',            'Noida',      'Uttar Pradesh','201309','India', TRUE),
+(23, '15 DLF Phase 3',         'Gurugram',   'Haryana',     '122002', 'India', TRUE),
+(24, '29 Park Street',         'Kolkata',    'West Bengal', '700016', 'India', TRUE),
+(25, '60 Adyar',               'Chennai',    'Tamil Nadu',  '600020', 'India', TRUE);
